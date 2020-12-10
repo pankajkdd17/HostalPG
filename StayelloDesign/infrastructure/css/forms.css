@@ -1,0 +1,24 @@
+input{
+	margin-top: 5px;
+	border-radius: 10px;
+	border: 0.5px solid black;
+	min-width: 380px
+}
+.row {
+	min-width: 300px
+	padding-top: 50px;
+}
+.col{
+	margin-top: 40px !important;
+	min-width:400px;
+}
+.textforabout{
+	padding-top: 80px;
+	padding-left: 50px;
+}
+@media screen and (max-width:500px){
+    .textforabout{
+	padding-top: 30px;
+	padding-left: 0px;
+}
+}

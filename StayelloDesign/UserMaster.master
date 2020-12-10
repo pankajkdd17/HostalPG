@@ -1,0 +1,408 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMaster.master.cs" Inherits="StayelloDesign_UserMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>StayEllo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="infrastructure/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ" rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="infrastructure/css/style.css" rel="stylesheet" />
+    <link href="infrastructure/css/core/main.css" rel="stylesheet" type="text/css" />
+    <link href="infrastructure/css/day/main.css" rel="stylesheet" type="text/css" />
+    <link href="infrastructure/css/bootstrap/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="infrastructure/css/boxstyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" href="infrastructure/img/faviconLogo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="infrastructure/img/faviconLogo.png" type="image/x-icon" />
+    <script src="../toastrAlert/toastr.js"></script>
+    <script src="../toastrAlert/jquery.min.js"></script>
+
+    <link href="../toastrAlert/toastr.css" rel="stylesheet" />
+    <!-- Start WOWSlider.com HEAD section -->
+    <!-- add to the <head> of your page -->
+    <link rel="stylesheet" type="text/css" href="infrastructure/slider/engine1/style.css" />
+    <script type="text/javascript" src="infrastructure/slider/engine1/jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
+
+    <script type="text/javascript">
+        function showpopwarning(msg, title) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "12000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            // toastr['warning'](msg, title);
+            var d = Date();
+            toastr.warning(msg, title);
+            return false;
+        }
+        function showpopsuccess(msg, title) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "12000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            // toastr['success'](msg, title);
+            var d = Date();
+            toastr.success(msg, title);
+            return false;
+        }
+
+        function showpoperror(msg, title) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "12000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            // toastr['success'](msg, title);
+            var d = Date();
+            toastr.error(msg, title);
+            return false;
+        }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: "aloja-ligh-regular";
+            src: url(infrastructure/Aloja-Light.otf);
+        }
+
+        @font-face {
+            font-family: "Quicksand-Bold";
+            src: url(infrastructure/Font/Quicksand%20Bold%20700.ttf);
+        }
+
+        @font-face {
+            font-family: "Quicksand-Light";
+            src: url(infrastructure/Font/Quicksand%20Light%20300.ttf);
+        }
+
+        @font-face {
+            font-family: "Quicksand-Medium";
+            src: url(infrastructure/Font/Quicksand%20Medium%20500.ttf);
+        }
+
+        @font-face {
+            font-family: "Quicksand-Regular";
+            src: url(infrastructure/Font/Quicksand%20Regular%20400.ttf);
+        }
+
+
+        .font0 {
+            font-family: "aloja-ligh-regular";
+            font-size: 30px;
+            text-transform: none;
+        }
+
+        .textfontLight {
+            font-family: "Quicksand-Light";
+        }
+
+        .textfontMedium {
+            font-family: "Quicksand-Medium";
+        }
+
+        .textfontBold {
+            font-family: "Quicksand-Bold";
+        }
+
+        .textfontRegular {
+            font-family: "Quicksand-Regular";
+        }
+
+        .location {
+            font-size: 18px;
+            color: #00adef;
+        }
+    </style>
+
+    <style>
+        .logo {
+            margin-top: 5px;
+        }
+
+        .margin {
+            margin-left: 0px;
+        }
+
+        @media (min-width:100px) and (max-width:500px) {
+
+            .logo {
+                margin-top: -17px;
+            }
+
+            .margin {
+                margin-left: -15px;
+            }
+        }
+
+        .mr-2, .mx-2 {
+            margin-right: 2.5rem!important;
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <form id="form1" runat="server" class="desktop" style="margin-right: 0%">
+        <nav class="navbar navbar-expand-lg navbar-light " style="margin-left: 0px; position: fixed; margin-top: -5px; z-index: 100; opacity: 1; width: 100%; height: 81px; background-color: #00ADEF">
+            <a href="index.aspx">
+                <img src="infrastructure/img/staylogo.jpeg" alt="StayEllo" class="navbar-brand img-responsive logo" style="height: 100px; width: 100px; margin-left: -10px;" />
+            </a>
+            <button class="navbar-toggler mr-2 margin" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #00ADEF">
+                <ul class="navbar-nav" style="margin-left: 1rem!important;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle textfontBold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">OUR PROPERTIES
+                        </a>
+                        <div class="dropdown-menu mr-3" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="manproperties.aspx">Men</a>
+                            <a class="dropdown-item" href="womanproperties.aspx">Women</a>
+                            <a class="dropdown-item" href="Coliving.aspx">Coliving</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle textfontBold" href="#" id="A1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LETS WORK TOGETHER
+                        </a>
+                        <div class="dropdown-menu mr-3" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Careers.aspx">Careers</a>
+                            <a class="dropdown-item" href="leaseyourproperty.aspx">Lease your property</a>
+                            <a class="dropdown-item" href="coachinginstitutes.aspx">Coaching Institutes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mob-option">
+                        <a class="nav-link float-left ml-5" href="Contact.aspx">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link float-left ml-5" href="https://api.whatsapp.com/send?phone=+917081521234">
+                            <i class="fa fa-whatsapp" style="height: 30px" aria-hidden="true"></i>
+                        </a>
+                        <%--<a class="nav-link ml-5 float-left" href="../assets/turbo/pages/sample-pages/login.html">--%>
+                        <a id="loginmob" runat="server" class="nav-link ml-5 float-left" href="../logs/login.aspx" visible="false"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                        <a id="accmob" runat="server" class="nav-link ml-5 float-left" href="../UserDasboard/myaccount.aspx" visible="false"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item desk-option" style="margin-left: 31%;">
+                        <a class="nav-link" href="Contact.aspx">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item desk-option">
+                        <a class="nav-link" href="https://api.whatsapp.com/send?phone=+917081521234">
+                            <i class="fa fa-whatsapp" style="height: 30px" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item desk-option">
+                        <a id="logindesk" runat="server" class="nav-link" href="../logs/login.aspx" visible="false"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item desk-option" style="margin-left: -10%">
+                        <a id="accdesk" runat="server" class="nav-link ml-5 float-left" href="../UserDasboard/myaccount.aspx" visible="false"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
+
+
+                </ul>
+                <div class="button nav-item">
+                </div>
+            </div>
+        </nav>
+        <div style="position: relative;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+
+
+        <footer class="page-footer font-small unique-color-dark desktop">
+            <div class="container-fluid" style="margin-top: 0px; padding-left: 0px; padding-right: 0px;">
+                <div class="list-unstyled list-inline text-center" style="background-color: #00ADEF; padding: 50px;">
+
+                    <div class="container text-center text-md-left">
+
+                        <div class="row">
+
+                            <div class="col-md-3 mob-f-padding">
+
+                                <img src="infrastructure/img/logo.png" style="height: 60px" alt="" />
+                                <p class="text-white mt-3" style="font-size: 12px">
+                                    Say Hello to comfortable and affordable stay at our premium rooms. we provide world-class accommodations to students and professionals at a reasonable price. Our properties are loaded with features you will fall in love with.
+                                </p>
+                            </div>
+
+                            <hr class="clearfix w-100 d-md-none">
+                            <div class="col-md-2 text-center mt-3">
+                                <h5 class="text-uppercase">Links</h5>
+                                <ul class="list-unstyled desklinks">
+                                    <li>
+                                        <a href="index.aspx">Home </a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.aspx">FAQ'S</a>
+                                    </li>
+                                    <li>
+                                        <a href="Contact.aspx">Contact</a>
+                                    </li>
+                                </ul>
+                                <ul class="mob-links-options" style="margin-left: -15px;">
+                                    <li>
+                                        <a href="index.aspx">Home </a>
+                                    </li>
+                                    <li>
+                                        <a class="pl-2" href="faq.aspx">FAQ'S</a>
+                                    </li>
+                                    <li>
+                                        <a class="pl-2" href="Contact.aspx">Contact</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <hr class="clearfix w-100 d-md-none" />
+                            <div class="col-md-2 mx-auto">
+                                <h5 class="text-uppercase mt-3 mb-2">Our properties</h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="manproperties.aspx">Man</a>
+                                    </li>
+                                    <li>
+                                        <a href="Womenproperties.aspx">Women</a>
+                                    </li>
+                                    <li>
+                                        <a href="Coliving.aspx">Coliving</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="clearfix w-100 d-md-none">
+                            <div class="col-md-3 mx-auto">
+
+                                <h5 class="text-uppercase mt-3 mb-2">Lets work together</h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="Careers.aspx">Careers</a>
+                                    </li>
+                                    <li>
+                                        <a href="leaseyourproperty.aspx">Lease your property</a>
+                                    </li>
+                                    <li>
+                                        <a href="coachinginstitutes.aspx">Coaching institutes</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="clearfix w-100 d-md-none">
+                            <div class="col-md-2">
+
+                                <h5 class="text-uppercase mt-3 mb-4">Stay in touch</h5>
+                                <div class=" center-block">
+                                    <a href="https://www.facebook.com/stayello"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                                    <a href="https://www.linkedin.com/company/31553719/admin/"><i id="social-tw" class="fa fa-linkedin-square fa-3x social"></i></a>
+                                    <a href="https://www.instagram.com/stay_ello/"><i id="social-pl" class="fa fa-instagram fa-3x social"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <!-- Pixel Code for https://www.widgetsquad.com/ -->
+                <script async src="https://www.widgetsquad.com/pixel/8f6papckfcrp6sx8k5nr0fkfzhk0qra1"></script>
+                <!-- END Pixel Code -->
+            </div>
+            <div class="footer-copyright text-center py-3" style="background-color: #00ADEF; color: #fff"/>
+                <h6>Copyright &copy; Stayello 2020. </h6>
+            </div>
+
+        </footer>
+
+
+        <script src="infrastructure/js/script.js"></script>
+        <script src="infrastructure/js/interaction/main.js"></script>
+        <script src="infrastructure/js/day/main.js"></script>
+        <script src="infrastructure/js/core/main.js"></script>
+        <script src="infrastructure/js/bootstrap/main.min.js"></script>
+        <script type="3d74259b669a9f4257608304-text/javascript">
+        <script type="32454099cc256b476c20412c-text/javascript">
+  $('#deskform select[name="gender"]').change('on',function(){
+      let gender=$('select[name="gender"]').val();
+      let location=$('select[name="location"]').val();
+       if(gender=='Girls'){
+           let loc=$('#deskform select[name="location"]');
+           loc.empty();
+           loc.append('<option value="">Select Location</option><option value="Aliganj">Aliganj</option><option value="Kapoorthala">Kapoorthala</option>');
+       }else if(gender=='Boys'){
+           let loc=$('#deskform select[name="location"] ');
+            loc.empty();
+         loc.append('<option value="">Select Location</option><option value="Mahanagar">Mahanagar</option><option value="Bara Chandganj">Bara Chandganj</option>');
+       }
+  });
+  
+    $('#mobform select[name="gender"]').change('on',function(){
+      let gender=$('#mobform select[name="gender"]').val();
+      let location=$('#mobform select[name="location"]').val();
+       if(gender=='Girls'){
+           let mloc=$('#mobform select[name="location"]');
+           mloc.empty();
+           mloc.append('<option value="">Select Location</option><option value="Aliganj">Aliganj</option><option value="Kapoorthala">Kapoorthala</option>');
+       }else if(gender=='Boys'){
+           let mloc=$('#mobform select[name="location"] ');
+            mloc.empty();
+         mloc.append('<option value="">Select Location</option><option value="Mahanagar">Mahanagar</option><option value="Bara Chandganj">Bara Chandganj</option>');
+       }
+  });
+        </script>
+        </div>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="32454099cc256b476c20412c-|49" defer=""></script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,105 @@
+.menu .card {
+    padding-top: 0!important;
+    border: 0;
+}
+
+.store-body {
+    top: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+    .store-body .product-info {
+        width: 60%;
+        border-right: 1px solid rgba(0,0,0,.125);
+    }
+
+    .store-body .product-payment-details {
+        width: 40%;
+        padding: 15px 15px 0;
+    }
+
+.product-info .product-gallery {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.product-gallery-featured {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px 0;
+    cursor: zoom-in;
+}
+
+.product-gallery-thumbnails .thumbnails-list li {
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.thumbnails-list li img {
+    display: block;
+    width: 100%;
+}
+
+.product-gallery-thumbnails .thumbnails-list li:hover::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: #007bff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product-info .product-seller-recommended {
+    padding: 20px 20px 0;
+}
+
+.product-comments textarea {
+    height: 50px;
+}
+
+.last-questions-list li {
+    margin-bottom: 20px;
+}
+
+    .last-questions-list li span {
+        padding-left: 10px;
+    }
+
+.bookbtn {
+    background-color: red;
+}
+
+.card-counter {
+    box-shadow: 2px 2px 10px #dadada;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: 100px;
+    border-radius: 5px;
+    transition: .3s linear all;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.blockofchar {
+    margin-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: .5px solid #9d9d9d;
+}

@@ -1,0 +1,91 @@
+﻿
+.rect {
+    border: 5px solid;
+    color: #00adef;
+    border-radius: 25px;
+    width: 92%;
+    height: 99%;
+    grid-row-align: center;
+    margin-left: 4%;
+}
+
+.rect_oth {
+    border: 6px solid;
+    color: #ffde00;
+    width: 100%;
+    height: 54%;
+    grid-row-align: center;
+    margin-left: 0%;
+    margin-top: 4%;
+    padding-top: 3%;
+}
+
+
+.rect_new {
+    border: 5px solid;
+    color: #00adef;
+    border-radius: 25px;
+}
+
+.row_adj {
+    width: 86%;
+    margin-left: 7%;
+}
+
+.stayellotext {
+    margin-top: 8%;
+}
+
+@media (min-width:100px) and (max-width:500px) {
+
+    .stayellotext {
+        margin-top: 30%;
+    }
+}
+
+
+
+.textstyle {
+    text-align: center;
+    color: #00adef!important;
+    white-space: nowrap;
+}
+
+.txtstyle {
+    font-size: 19px;
+    text-align: center;
+}
+
+.fontsize {
+    font-size: 10px;
+}
+
+.ratecolor {
+    color: #f00;
+    font-size: 25px;
+}
+
+@font-face {
+    font-family: "aloja-ligh-regular";
+    src: url(infrastructure/Aloja-Light.otf);
+}
+
+.font0 {
+    font-family: "aloja-ligh-regular";
+    font-size: 30px;
+    text-transform: none;
+}
+
+.div-or-line {
+    display: inline;
+    flex-direction: row;
+}
+
+.hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
